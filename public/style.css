@@ -1,0 +1,151 @@
+.column {
+    flex: 50%;
+}
+.row {
+    display: flex;
+}
+body {
+    text-align: center;
+}
+.row input {
+    padding: 10px;
+    margin: 15px;
+    height: 10px;
+    width: 50%;
+    text-align: center;
+}
+.row select {
+    margin: 15px;
+    height: 3.5%;
+}
+ul {
+    list-style: none;
+}
+button {
+    margin: 0.5rem;
+    border-radius: 45%;
+    border-style: none;
+    padding: 0.5rem;
+    width: 150px;
+    box-shadow: 0px 1px 5px black;
+}
+.approval {
+    background-color: rgb(10, 169, 10);
+    color: white;
+}
+.disapproval {
+    background-color: red;
+    color: white;
+}
+.standards {
+    background-color: yellow;
+    margin-right: 5rem;
+}
+.plans {
+    background-color: lime;
+    margin-left: 5rem;
+}
+.edit {
+    background-color: orange;
+}
+.update {
+    background-color: lightsalmon;
+}
+.delete {
+    background-color: lightcoral;
+}
+.add {
+    background-color: limegreen;
+}
+body {
+    background-color: lightblue;
+}
+h1, h2 {
+    text-decoration: underline;
+}
+input, select {
+    background-color: beige;
+    border-style: none;
+}
+.standard-updates {
+    text-align: right;
+}
+.plans-form {
+    text-align: right;
+}
+.logoutdev {
+    background-color: orangered;
+    margin-bottom: 2rem;
+}
+.logoutcity {
+    background-color: orangered;
+    margin-bottom: 2rem;
+}
+.dev-login {
+    background-color: lime;
+    margin: 1rem;
+}
+.dev-signup {
+    background-color: yellow;
+    margin: 1rem;
+}
+.switch-city-login {
+    background-color: orange;
+    margin: 1rem;
+}
+.city-login {
+    background-color: lime;
+    margin: 1rem;
+}
+.city-signup {
+    background-color: yellow;
+    margin: 1rem;
+}
+.switch-dev-login {
+    background-color: orange;
+    margin: 1rem;
+}
+.dev-create {
+    background-color: lime;
+    margin: 1rem;
+}
+.city-create {
+    background-color: lime;
+    margin: 1rem;
+}
+.back-dev-login {
+    background-color: salmon;
+    margin: 1rem;
+}
+.back-city-login {
+    background-color: salmon;
+    margin: 1rem;
+}
+.dev-login-section input {
+    padding: 10px;
+    margin: 15px;
+    height: 10px;
+    width: 15%;
+    text-align: center;
+}
+.city-login-section input {
+    padding: 10px;
+    margin: 15px;
+    height: 10px;
+    width: 15%;
+    text-align: center;
+}
+.dev-sign-up-section input {
+    padding: 10px;
+    margin: 15px;
+    height: 10px;
+    width: 15%;
+    text-align: center;
+}
+.city-sign-up-section input {
+    padding: 10px;
+    margin: 15px;
+    height: 10px;
+    width: 15%;
+    text-align: center;
+}
