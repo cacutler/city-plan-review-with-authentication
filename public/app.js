@@ -125,7 +125,7 @@ Vue.createApp({
             data += "&roadbaseThickness=" + encodeURIComponent(this.roadbaseThickness);
             data += "&approved=" + encodeURIComponent(this.approved);
             console.log("New plan being sent:", data);
-            fetch("/developer_plans", {
+            fetch("http://localhost:8080/developer_plans", {
                 credentials: "include",
                 method: "POST",
                 body: data,
@@ -142,7 +142,7 @@ Vue.createApp({
         },
         deletePlan: function (developer_planID) {
             console.log("Plan being deleted:", developer_planID);
-            fetch("/developer_plans/" + developer_planID, {
+            fetch("http://localhost:8080/developer_plans/" + developer_planID, {
                 credentials: "include",
                 method: "DELETE"
             }).then((response) => {
@@ -152,7 +152,7 @@ Vue.createApp({
         },
         editPlan: function (developer_planID) {
             console.log("Developer plan being edited:", developer_planID);
-            fetch("/developer_plans/" + developer_planID, {
+            fetch("http://localhost:8080/developer_plans/" + developer_planID, {
                 credentials: "include"
             }).then((response) => {
                 if (response.status == 200) {
@@ -228,7 +228,7 @@ Vue.createApp({
             data += "&roadbaseThickness=" + encodeURIComponent(this.roadbaseThickness);
             data += "&approved=" + encodeURIComponent(this.approved);
             console.log("Updated plan being sent:", data);
-            fetch("/developer_plans/" + developer_planID, {
+            fetch("http://localhost:8080/developer_plans/" + developer_planID, {
                 credentials: "include",
                 method: "PUT",
                 body: data,
@@ -335,7 +335,7 @@ Vue.createApp({
         },
         editStandards: function (standardsID) {
             console.log("City standards being edited:", standardsID);
-            fetch("/city_standards/" + standardsID, {
+            fetch("http://localhost:8080/city_standards/" + standardsID, {
                 credentials: "include"
             }).then((response) => {
                 if (response.status == 200) {
@@ -388,7 +388,7 @@ Vue.createApp({
             data += "&minRoadbaseThickness=" + encodeURIComponent(this.minRoadbaseThickness);
             data += "&maxRoadbaseThickness=" + encodeURIComponent(this.maxRoadbaseThickness);
             console.log("Updated standards being sent:", data);
-            fetch("/city_standards/" + standardsID, {
+            fetch("http://localhost:8080/city_standards/" + standardsID, {
                 credentials: "include",
                 method: "PUT",
                 body: data,
@@ -415,7 +415,7 @@ Vue.createApp({
             data += "&devSignUpEmail=" + encodeURIComponent(this.devSignUpEmail);
             data += "&devSignUpAddress=" + encodeURIComponent(this.devSignUpAddress);
             console.log("Developer sign up request data being sent:", data);
-            fetch("/developer_users", {
+            fetch("http://localhost:8080/developer_users", {
                 credentials: "include",
                 method: "POST",
                 body: data,
@@ -445,7 +445,7 @@ Vue.createApp({
             data += "&citySignUpCityLocation=" + encodeURIComponent(this.citySignUpCityLocation);
             data += "&citySignUpPhone=" + encodeURIComponent(this.citySignUpPhone);
             console.log("City sign up request data being sent:", data);
-            fetch("/city_users", {
+            fetch("http://localhost:8080/city_users", {
                 credentials: "include",
                 method: "POST",
                 body: data,
@@ -471,7 +471,7 @@ Vue.createApp({
             var data = "devLoginUsername=" + encodeURIComponent(this.devLoginUsername);
             data += "&devLoginPlainPassword=" + encodeURIComponent(this.devLoginPlainPassword);
             console.log("Developer login request data being sent:", data);
-            fetch("/developer_session", {
+            fetch("http://localhost:8080/developer_session", {
                 credentials: "include",
                 method: "POST",
                 body: data,
@@ -494,7 +494,7 @@ Vue.createApp({
         },
         logoutDevUser: function () {
             console.log("Developer logout button was clicked.");
-            fetch("/developer_session", {
+            fetch("http://localhost:8080/developer_session", {
                 credentials: "include",
                 method: "DELETE"
             }).then((response) => {
@@ -511,7 +511,7 @@ Vue.createApp({
             var data = "cityLoginCityID=" + encodeURIComponent(this.cityLoginCityID);
             data += "&cityLoginPlainPassword=" + encodeURIComponent(this.cityLoginPlainPassword);
             console.log("City login request data being sent:", data);
-            fetch("/city_session", {
+            fetch("http://localhost:8080/city_session", {
                 credentials: "include",
                 method: "POST",
                 body: data,
@@ -534,7 +534,7 @@ Vue.createApp({
         },
         logoutCityUser: function () {
             console.log("City logout button was clicked.");
-            fetch("/city_session", {
+            fetch("http://localhost:8080/city_session", {
                 credentials: "include",
                 method: "DELETE"
             }).then((response) => {
@@ -545,7 +545,7 @@ Vue.createApp({
         },
         loadStandards: function () {
             console.log("Loading standards.");
-            fetch("/city_standards", {
+            fetch("http://localhost:8080/city_standards", {
                 credentials: "include"
             }).then((response) => {
                 if (response.status == 200) {
@@ -557,7 +557,7 @@ Vue.createApp({
             });
         },
         getCitySession: function () {
-            fetch("/city_session", {
+            fetch("http://localhost:8080/city_session", {
                 credentials: "include"
             }).then((response) => {
                 if (response.status == 200) {
@@ -571,7 +571,7 @@ Vue.createApp({
             });
         },
         getDevSession: function () {
-            fetch("/developer_session", {
+            fetch("http://localhost:8080/developer_session", {
                 credentials: "include"
             }).then((response) => {
                 if (response.status == 200) {
