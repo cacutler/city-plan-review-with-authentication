@@ -2,6 +2,7 @@ const express = require("express")
 const model = require("./model")
 const cors = require("cors")
 const session = require("express-session")
+require("dotenv").config()
 const app = express()
 app.use(cors({
     credentials: true,
